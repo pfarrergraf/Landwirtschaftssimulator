@@ -1,15 +1,15 @@
 # chatgpt-INT-901-final-integration
 
-- Status: active
+- Status: done
 - Task: INT-901
 - Mode: branch
 - Branch: agent/INT-901/final-integration
 - Started: 2026-07-13T20:30:00+02:00
-- Updated: 2026-07-13T20:30:00+02:00
+- Updated: 2026-07-13T20:34:00+02:00
 
 ## Arbeitet gerade an
 
-Abschließende Integration der von mehreren Agenten entwickelten Spiel-, Website- und Deploymentpfade.
+Abgeschlossen: Integration der von mehreren Agenten entwickelten Spiel-, Website- und Deploymentpfade.
 
 ## Beanspruchte Pfade
 
@@ -23,16 +23,23 @@ Abschließende Integration der von mehreren Agenten entwickelten Spiel-, Website
 - Website-Workflow unabhängig geprüft und erfolgreich gemergt
 - Android-Workflow mehrfach geprüft, Fehler isoliert und erfolgreiche APK-Erzeugung bestätigt
 - kanonische und historische Projektpfade identifiziert
+- Integrationsaudit dokumentiert
+- README auf aktuellen Stand gebracht
+- Validator gegen erneute Legacy-Pfadabweichungen abgesichert
 
 ## Geänderte Dateien
 
+- `README.md`
+- `docs/reviews/INTEGRATION_AUDIT_2026-07-13.md`
+- `scripts/validate_repository.py`
 - diese Statusdatei
 
 ## Tests und Nachweise
 
 - Website-Workflow: erfolgreich
 - Android-Debug-APK: erfolgreich als Actions-Artefakt erzeugt
-- Repository- und Pytest-Validierungen: erfolgreich
+- `Validate and test`: erfolgreich
+- `Repository validation`: erfolgreich
 
 ## Entscheidungen und Annahmen
 
@@ -44,4 +51,6 @@ Keine technischen Integrationsblocker. Ein realer Android-Gerätetest bleibt vor
 
 ## Übergabe / Nächste Schritte
 
-Audit dokumentieren, Validator verschärfen und README korrigieren.
+- APK-Artefakt auf einem realen Android-Gerät installieren und testen.
+- Anschließend einen Versions-Tag erstellen, damit GitHub ein öffentliches Release mit APK erzeugt.
+- Website später mit dem jeweils neuesten GitHub Release verknüpfen.
