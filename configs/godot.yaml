@@ -1,0 +1,11 @@
+engine_version: "4.7-stable"
+renderer: mobile
+scripting: gdscript
+primary_export: android
+secondary_exports:
+  - linux
+  - web_reduced
+headless_checks:
+  - import
+  - parse
+  - unit_tests

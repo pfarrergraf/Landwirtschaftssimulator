@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "currency": "EUR",
+  "starting_cash_eur": 100000,
+  "field_ids": ["field_01","field_02","field_03","field_04","field_05","field_06","field_07","field_08","field_09","field_10"],
+  "owned_vehicle_ids": ["fendt_724_vario_used","fliegl_small_trailer_used","krampe_large_trailer_used","claas_lexion_660_used"],
+  "owned_implement_ids": ["generic_plough_basic","generic_cultivator_basic","generic_seed_drill_basic","generic_fertilizer_spreader_basic","generic_grain_header_basic"],
+  "default_difficulty": "primary_school"
+}

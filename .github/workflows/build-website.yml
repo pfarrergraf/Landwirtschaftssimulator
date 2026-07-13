@@ -1,0 +1,20 @@
+name: Package website
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "apps/website/**"
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-pages-static-site
+          path: apps/website/public

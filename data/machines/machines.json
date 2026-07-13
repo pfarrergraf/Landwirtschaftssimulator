@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "note": "Brand/model entries are planning metadata. Prices are rounded game values. No asset license is implied.",
+  "machines": [
+    {"id":"fendt_724_vario_used","brand":"Fendt","model":"724 Vario","category":"tractor","condition":"used","game_price_eur":160000,"power_class":"medium_high","license_status":"planned","asset_status":"primitive_placeholder","starter":true},
+    {"id":"fliegl_small_trailer_used","brand":"Fliegl","model":"Small farm trailer placeholder","category":"trailer","condition":"used","game_price_eur":18000,"capacity_t":10,"license_status":"planned","asset_status":"primitive_placeholder","starter":true},
+    {"id":"krampe_large_trailer_used","brand":"Krampe","model":"Large farm trailer placeholder","category":"trailer","condition":"used","game_price_eur":35000,"capacity_t":22,"license_status":"planned","asset_status":"primitive_placeholder","starter":true},
+    {"id":"claas_lexion_660_used","brand":"CLAAS","model":"LEXION 660","category":"grain_combine","condition":"used","game_price_eur":220000,"harvest_categories":["grain_combine"],"license_status":"planned","asset_status":"primitive_placeholder","starter":true},
+    {"id":"fendt_1050_vario_new","brand":"Fendt","model":"1050 Vario","category":"tractor","condition":"new","game_price_eur":500000,"power_class":"very_high","license_status":"planned","asset_status":"primitive_placeholder","starter":false},
+    {"id":"john_deere_6r_new","brand":"John Deere","model":"6R Series placeholder","category":"tractor","condition":"new","game_price_eur":250000,"power_class":"medium_high","license_status":"planned","asset_status":"primitive_placeholder","starter":false},
+    {"id":"john_deere_x9_new","brand":"John Deere","model":"X9 Series placeholder","category":"grain_combine","condition":"new","game_price_eur":650000,"harvest_categories":["grain_combine"],"license_status":"planned","asset_status":"primitive_placeholder","starter":false},
+    {"id":"claas_jaguar_new","brand":"CLAAS","model":"JAGUAR Series placeholder","category":"forage_harvester","condition":"new","game_price_eur":480000,"harvest_categories":["forage"],"license_status":"planned","asset_status":"primitive_placeholder","starter":false},
+    {"id":"generic_beet_harvester_rental","brand":"Neutral","model":"Beet harvester rental","category":"beet_harvester","condition":"rental","game_price_eur":0,"rental_eur_per_day":5200,"license_status":"not_required","asset_status":"neutral_model","starter":false},
+    {"id":"generic_potato_harvester_rental","brand":"Neutral","model":"Potato harvester rental","category":"potato_harvester","condition":"rental","game_price_eur":0,"rental_eur_per_day":4800,"license_status":"not_required","asset_status":"neutral_model","starter":false}
+  ]
+}

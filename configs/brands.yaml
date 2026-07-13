@@ -1,0 +1,17 @@
+brands:
+  - name: Fendt
+    owner_group: AGCO
+    status: planned
+  - name: CLAAS
+    owner_group: CLAAS
+    status: planned
+  - name: John Deere
+    owner_group: Deere & Company
+    status: planned
+  - name: Fliegl
+    owner_group: unknown_verify
+    status: planned
+  - name: Krampe
+    owner_group: unknown_verify
+    status: planned
+release_default: fictional_replacements_until_licensed

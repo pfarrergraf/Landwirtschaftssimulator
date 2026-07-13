@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "fields": [
+    {"id":"field_01","hectares":3,"soil":"good","distance_km":0.2,"suitability":["wheat","barley","rapeseed"]},
+    {"id":"field_02","hectares":4,"soil":"medium","distance_km":0.5,"suitability":["wheat","oats","grass"]},
+    {"id":"field_03","hectares":5,"soil":"heavy","distance_km":0.8,"suitability":["wheat","sugar_beet","rapeseed"]},
+    {"id":"field_04","hectares":7,"soil":"sandy","distance_km":1.2,"suitability":["maize","oats","sunflower"]},
+    {"id":"field_05","hectares":8,"soil":"good","distance_km":1.5,"suitability":["wheat","barley","rapeseed"]},
+    {"id":"field_06","hectares":6,"soil":"medium","distance_km":1.8,"suitability":["sugar_beet","maize","wheat"]},
+    {"id":"field_07","hectares":9,"soil":"clay","distance_km":2.1,"suitability":["wheat","rapeseed","grass"]},
+    {"id":"field_08","hectares":5,"soil":"good","distance_km":2.4,"suitability":["potatoes","wheat","barley"]},
+    {"id":"field_09","hectares":7,"soil":"medium","distance_km":3.0,"suitability":["maize","wheat","sunflower"]},
+    {"id":"field_10","hectares":6,"soil":"weak","distance_km":3.5,"suitability":["oats","grass","wheat"]}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "levels": [
+    {"id":"easy","name_de":"Leicht","money_rounding_eur":1000,"hard_bankruptcy":false,"auto_maintenance":true,"auto_crop_rotation":true,"show_exact_soil_values":false,"recommendations":"strong"},
+    {"id":"primary_school","name_de":"Grundschule","money_rounding_eur":100,"hard_bankruptcy":false,"auto_maintenance":false,"auto_crop_rotation":true,"show_exact_soil_values":false,"recommendations":"guided"},
+    {"id":"medium","name_de":"Mittel","money_rounding_eur":10,"hard_bankruptcy":false,"auto_maintenance":false,"auto_crop_rotation":false,"show_exact_soil_values":true,"recommendations":"optional"},
+    {"id":"professional","name_de":"Profi","money_rounding_eur":1,"hard_bankruptcy":true,"auto_maintenance":false,"auto_crop_rotation":false,"show_exact_soil_values":true,"recommendations":"off"}
+  ]
+}
