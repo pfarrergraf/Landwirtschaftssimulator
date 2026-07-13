@@ -1,0 +1,19 @@
+name: Governance
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - "planning/**"
+      - "feature/**"
+      - "fix/**"
+
+jobs:
+  validate-governance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Run governance validation
+        run: uv run --no-project python scripts/check_repo_governance.py
