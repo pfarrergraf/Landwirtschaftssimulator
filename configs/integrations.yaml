@@ -1,0 +1,25 @@
+version: 1
+
+integrations:
+  vllm:
+    enabled: false
+    purpose: local_agent_and_data_assistance
+    required_for_runtime: false
+
+  comfyui:
+    enabled: false
+    purpose: concept_and_material_generation
+    required_for_runtime: false
+    output_policy: review_optimize_and_document_before_commit
+
+  blender:
+    enabled: true
+    purpose: source_modeling_retopology_uv_lod_and_export
+    required_for_runtime: false
+
+  paid_cloud_services:
+    enabled: false
+    approval_required: true
+
+runtime:
+  ai_service_required: false
