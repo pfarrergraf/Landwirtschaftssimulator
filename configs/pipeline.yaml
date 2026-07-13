@@ -1,0 +1,17 @@
+pipeline:
+  validate:
+    - data_catalogs
+    - starter_invariants
+    - brand_license_fields
+  test:
+    - unit
+    - deterministic_balance
+  build:
+    website: static
+    android: manual_until_vertical_slice
+  release:
+    requires:
+      - license_gate
+      - privacy_gate
+      - device_performance_gate
+      - signed_aab

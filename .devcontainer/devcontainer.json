@@ -1,0 +1,10 @@
+{
+  "name": "Landwirtschaftssimulator",
+  "build": {"dockerfile": "../Dockerfile", "context": ".."},
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": ["geequlim.godot-tools", "charliermarsh.ruff"]
+    }
+  }
+}

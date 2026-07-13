@@ -1,0 +1,13 @@
+[project]
+name = "landwirtschaftssimulator-tools"
+version = "0.0.1"
+description = "Containerfaehige Validierungs- und Balancingwerkzeuge fuer den Landwirtschaftssimulator"
+requires-python = ">=3.11,<3.14"
+dependencies = []
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

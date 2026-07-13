@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "fuel_price_eur_per_l": 1.65,
+  "grain_combine_fixed_annual_maintenance_eur": 8000,
+  "tractor_fixed_annual_maintenance_eur": 4000,
+  "small_trailer_initial_repair_eur": 1500,
+  "contractor_eur_per_ha": {"plough":120,"sow":100,"grain_harvest":250,"beet_harvest":420,"potato_harvest":480},
+  "rental_base_eur_per_day": {"grain_combine":3200,"beet_harvester":5200,"potato_harvester":4800}
+}

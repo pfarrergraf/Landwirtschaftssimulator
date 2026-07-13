@@ -1,0 +1,22 @@
+name: Validate and test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+          enable-cache: true
+      - run: uv sync --frozen
+      - run: uv run python tools/validator/validate_data.py
+      - run: uv run python -m unittest discover -s tests -v
+      - run: uv run python tools/balancer/simulate_year.py

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "note": "Rounded game-balancing values, not live market quotations.",
+  "crops": [
+    {"id":"wheat","name_de":"Weizen","seed_cost_eur_per_ha":150,"care_cost_eur_per_ha":420,"yield_t_per_ha":7.5,"normal_price_eur_per_t":220,"harvest_category":"grain_combine","risk":"low","season":"autumn_sown"},
+    {"id":"barley","name_de":"Gerste","seed_cost_eur_per_ha":140,"care_cost_eur_per_ha":390,"yield_t_per_ha":7.0,"normal_price_eur_per_t":195,"harvest_category":"grain_combine","risk":"low","season":"autumn_sown"},
+    {"id":"oats","name_de":"Hafer","seed_cost_eur_per_ha":130,"care_cost_eur_per_ha":340,"yield_t_per_ha":5.5,"normal_price_eur_per_t":205,"harvest_category":"grain_combine","risk":"low","season":"spring_sown"},
+    {"id":"rapeseed","name_de":"Raps","seed_cost_eur_per_ha":110,"care_cost_eur_per_ha":520,"yield_t_per_ha":3.6,"normal_price_eur_per_t":450,"harvest_category":"grain_combine","risk":"medium","season":"autumn_sown"},
+    {"id":"maize","name_de":"Mais","seed_cost_eur_per_ha":230,"care_cost_eur_per_ha":520,"yield_t_per_ha":10.0,"normal_price_eur_per_t":210,"harvest_category":"maize_header","risk":"medium","season":"spring_sown"},
+    {"id":"sugar_beet","name_de":"Zuckerrueben","seed_cost_eur_per_ha":260,"care_cost_eur_per_ha":780,"yield_t_per_ha":75.0,"normal_price_eur_per_t":45,"harvest_category":"beet_harvester","risk":"medium","season":"spring_sown"},
+    {"id":"potatoes","name_de":"Kartoffeln","seed_cost_eur_per_ha":900,"care_cost_eur_per_ha":1200,"yield_t_per_ha":42.0,"normal_price_eur_per_t":180,"harvest_category":"potato_harvester","risk":"high","season":"spring_sown"},
+    {"id":"sunflower","name_de":"Sonnenblumen","seed_cost_eur_per_ha":180,"care_cost_eur_per_ha":430,"yield_t_per_ha":3.0,"normal_price_eur_per_t":430,"harvest_category":"sunflower_header","risk":"medium","season":"spring_sown"}
+  ]
+}

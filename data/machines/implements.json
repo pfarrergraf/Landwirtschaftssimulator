@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "implements": [
+    {"id":"generic_plough_basic","category":"plough","owned_at_start":true},
+    {"id":"generic_cultivator_basic","category":"cultivator","owned_at_start":true},
+    {"id":"generic_seed_drill_basic","category":"seed_drill","owned_at_start":true},
+    {"id":"generic_fertilizer_spreader_basic","category":"fertilizer_spreader","owned_at_start":true},
+    {"id":"generic_grain_header_basic","category":"grain_header","owned_at_start":true}
+  ]
+}

@@ -1,0 +1,14 @@
+integrations:
+  github_actions:
+    status: active
+    purpose: validate_test_build
+  cloudflare_pages:
+    status: planned
+    source: apps/website/public
+  cloudflare_r2:
+    status: optional_future
+    purpose: large_public_artifacts
+  cloudflare_workers:
+    status: disabled_for_mvp
+  runtime_ai:
+    status: disabled

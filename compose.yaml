@@ -1,0 +1,7 @@
+services:
+  development:
+    build: .
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    command: sh -lc "uv sync && uv run python tools/validator/validate_data.py && uv run python -m unittest discover -s tests -v"

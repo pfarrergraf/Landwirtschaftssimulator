@@ -1,0 +1,25 @@
+name: Android planning build
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  android-debug:
+    runs-on: ubuntu-latest
+    env:
+      GODOT_VERSION: "4.7-stable"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Explain current gate
+        run: |
+          echo "This workflow is intentionally gated until export_presets.cfg is approved."
+          echo "Copy apps/game/export_presets.cfg.example to export_presets.cfg in a dedicated implementation PR."
+      - name: Verify planning shell exists
+        run: test -f apps/game/project.godot && test -f apps/game/scenes/main.tscn
