@@ -1,0 +1,40 @@
+version: 1
+
+coordinate_system:
+  unit: meter
+  exchange_format: gltf_2_glb
+
+naming:
+  pattern: "<area>_<object>_<variant>_<lod>_<version>"
+  ascii_only: true
+  lowercase: true
+
+materials:
+  workflow: metallic_roughness_pbr
+  required_channels:
+    - base_color
+    - normal
+    - roughness
+  optional_channels:
+    - metallic
+    - ambient_occlusion
+    - emissive
+    - opacity
+
+quality_profiles:
+  - low
+  - medium
+  - high
+
+required_metadata:
+  - asset_id
+  - author_or_generation_method
+  - license
+  - source_reference
+  - scale
+  - lods
+  - collision
+  - target_profile
+
+restricted_terms:
+  policy: "No brand names, logos, or protected model names without explicit approval."
