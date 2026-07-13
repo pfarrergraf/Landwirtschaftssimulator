@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Offenes Entwicklungsprojekt für einen mobilen 3D-Landwirtschaftssimulator mit Godot und Android-Fokus.">
+  <meta name="theme-color" content="#18251b">
+  <title>Landwirtschaftssimulator – Offenes Entwicklungsprojekt</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#start" aria-label="Zur Startseite">
+      <span class="brand-mark" aria-hidden="true">LS</span>
+      <span>Landwirtschaftssimulator</span>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#vision">Vision</a>
+      <a href="#features">Funktionen</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#mitmachen">Mitmachen</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="start" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Open Development · Godot · Android</p>
+        <h1>Ein Landwirtschaftsspiel, das offen und nachvollziehbar entsteht.</h1>
+        <p class="lead">Geplant ist ein mobiler 3D-Simulator mit begehbarem Hof, Spielfigur, Traktoren, Feldern, Pflanzenwachstum und speicherbaren Spielständen.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/pfarrergraf/Landwirtschaftssimulator">Projekt auf GitHub</a>
+          <a class="button secondary" href="#roadmap">Entwicklungsplan ansehen</a>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="Projektstatus">
+        <p class="status-label">Aktueller Stand</p>
+        <strong>Technische Grundlagen und erster spielbarer Prototyp</strong>
+        <ul>
+          <li>Godot 4 als Engine für den Android-MVP</li>
+          <li>Avatar-, Interaktions- und Savegame-Verträge</li>
+          <li>Planung für Felder, Maschinen und Pflanzen</li>
+          <li>Öffentliches Repository und transparente Roadmap</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="vision" class="section two-column">
+      <div>
+        <p class="eyebrow">Vision</p>
+        <h2>Realistische Landwirtschaft, ohne unnötige Komplexität.</h2>
+      </div>
+      <div>
+        <p>Der erste spielbare Ausschnitt konzentriert sich auf einen kleinen Hof, ein Testfeld, eine steuerbare Spielfigur und einen generischen Traktor. Der gesamte Ablauf soll auf Desktop und Android funktionieren.</p>
+        <p>Das Projekt wird modular aufgebaut. Simulation, Darstellung, Eingabe und Speichern bleiben getrennt, damit Funktionen später erweitert und automatisiert getestet werden können.</p>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <p class="eyebrow">Geplante Kernfunktionen</p>
+      <h2>Vom Hof bis zur Ernte.</h2>
+      <div class="card-grid">
+        <article class="card">
+          <span class="card-number">01</span>
+          <h3>Spielfigur</h3>
+          <p>Third-Person-Steuerung, Touch-Eingabe, Kamera, Interaktionen und anpassbare Presets.</p>
+        </article>
+        <article class="card">
+          <span class="card-number">02</span>
+          <h3>Maschinen</h3>
+          <p>Generische, markenfreie Traktoren und Geräte mit Einsteigen, Anhängen und Arbeitszuständen.</p>
+        </article>
+        <article class="card">
+          <span class="card-number">03</span>
+          <h3>Felder und Pflanzen</h3>
+          <p>Bodenbearbeitung, Aussaat, Feuchtigkeit, Wachstumsstadien und sichtbare Erntezustände.</p>
+        </article>
+        <article class="card">
+          <span class="card-number">04</span>
+          <h3>Speichern und Laden</h3>
+          <p>Versionierte Spielstände mit stabilen IDs und nachvollziehbaren Migrationen.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section roadmap">
+      <p class="eyebrow">Roadmap</p>
+      <h2>Der Weg zum ersten Android-Build.</h2>
+      <ol>
+        <li><strong>Grundlagen:</strong> Engine, Datenverträge, Grafikregeln und Savegame-Schema.</li>
+        <li><strong>Prototyp:</strong> Spielfigur, Kamera, Testfeld und einfacher Traktor.</li>
+        <li><strong>Spielschleife:</strong> Einsteigen, Werkzeug nutzen, Feld bearbeiten und Weizen säen.</li>
+        <li><strong>Integration:</strong> Wachstum, Speichern, Laden und mobile Bedienung.</li>
+        <li><strong>Android-Abnahme:</strong> Performance, Stabilität und reale Gerätetests.</li>
+      </ol>
+    </section>
+
+    <section id="mitmachen" class="section callout">
+      <div>
+        <p class="eyebrow">Öffentliches Projekt</p>
+        <h2>Code, Planung und Fortschritt sind offen einsehbar.</h2>
+        <p>Das Repository enthält Architekturentscheidungen, Aufgaben, Testregeln und die technische Roadmap. Beiträge, Hinweise und nachvollziehbare Verbesserungsvorschläge sind willkommen.</p>
+      </div>
+      <a class="button primary" href="https://github.com/pfarrergraf/Landwirtschaftssimulator/issues">Offene Aufgaben ansehen</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Landwirtschaftssimulator · öffentliches Entwicklungsprojekt</p>
+    <p><a href="https://github.com/pfarrergraf/Landwirtschaftssimulator">GitHub</a></p>
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
