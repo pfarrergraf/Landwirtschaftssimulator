@@ -39,3 +39,11 @@ Status: accepted. KI darf spaeter bei Entwicklung, Sprache oder Assetprototypen 
 ## ADR-010: Lizenz vor Veroeffentlichung
 
 Status: accepted. Bis zur schriftlichen Freigabe nutzt der Build neutrale Platzhalterassets, selbst wenn echte Markenbezeichnungen in internen Katalogen erfasst sind.
+
+## ADR-011: Python-Referenzsimulation fuer P1
+
+Status: accepted. Der containerfaehige Python-Kern ist die ausfuehrbare Regelspezifikation fuer Kalender, Felder, Wirtschaft, Maschinen und Savegames. Godot bleibt der Android-Client und muss dieselben Datenvertraege und Invarianten einhalten.
+
+## ADR-012: 360-Tage-Spielkalender
+
+Status: accepted. Ein Spieljahr besitzt zwoelf Monate mit je 30 Tagen. Dadurch bleiben Berechnungen, Unterrichtsaufgaben und Zeitspruenge nachvollziehbar. Saisonzuordnung: Winter Dezember bis Februar, Fruehling Maerz bis Mai, Sommer Juni bis August, Herbst September bis November.

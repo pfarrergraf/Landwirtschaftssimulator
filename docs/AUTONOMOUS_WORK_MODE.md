@@ -9,4 +9,6 @@ For `pfarrergraf/Landwirtschaftssimulator`, the repository agent may without fur
 - create issues and pull requests,
 - configure tests and GitHub Actions,
 - prepare Cloudflare Pages, Workers, R2, D1, and Wrangler integration,
-- run container-based planning
+- run container-based planning.
+
+Excluded without explicit confirmation: secrets, paid services, Play Store publication, and final brand-license decisions.

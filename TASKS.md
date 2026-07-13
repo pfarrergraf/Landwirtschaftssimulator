@@ -13,13 +13,13 @@
 
 ## P1 - Simulationskern ohne 3D
 
-- [ ] Kalender, Jahreszeiten und Zeitschritte implementieren.
-- [ ] Feldzustandsautomat implementieren.
-- [ ] Kosten-, Ertrags- und Marktmodell implementieren.
-- [ ] Kauf, Miete und Lohnunternehmer implementieren.
-- [ ] Maschinenverschleiss und Reparaturmodell implementieren.
-- [ ] Speicherformat Version 1 implementieren.
-- [ ] 100 deterministische Wirtschaftsjahre als Regressionstest simulieren.
+- [x] Kalender, Jahreszeiten und Zeitschritte implementieren.
+- [x] Feldzustandsautomat implementieren.
+- [x] Kosten-, Ertrags- und Marktmodell implementieren.
+- [x] Kauf, Miete und Lohnunternehmer implementieren.
+- [x] Maschinenverschleiss und Reparaturmodell implementieren.
+- [x] Speicherformat Version 1 implementieren.
+- [x] 100 deterministische Wirtschaftsjahre als Regressionstest simulieren.
 
 ## P2 - Android Vertical Slice
 

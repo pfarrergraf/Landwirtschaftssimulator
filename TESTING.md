@@ -7,6 +7,7 @@ uv sync
 uv run python tools/validator/validate_data.py
 uv run python -m unittest discover -s tests -v
 uv run python tools/balancer/simulate_year.py
+uv run python tools/simulation/run_regression.py --years 100 --seed 2026
 ```
 
 ## Quality Gates
@@ -19,6 +20,9 @@ uv run python tools/balancer/simulate_year.py
 - Jede Kultur besitzt Kosten, Ertrag, Saison und kompatible Erntekategorie.
 - Jede Schwierigkeitsstufe definiert Rundung, Automatisierung und Ausfallfolgen.
 - Jahresergebnis ist bei identischem Seed reproduzierbar.
+- Savegame-Schema 1 laesst sich verlustfrei speichern und laden.
+- 100 volle Wirtschaftsjahre bleiben deterministisch und zahlungsfaehig.
+- Unbezahlbare Aktionen veraendern weder Feldzustand noch Geldbestand.
 
 ## Spaetere Godot-Gates
 
