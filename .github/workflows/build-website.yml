@@ -1,20 +1,63 @@
-name: Package website
+name: Build and deploy website
 
 on:
   workflow_dispatch:
   pull_request:
     paths:
-      - "apps/website/**"
+      - "website/**"
+      - "package.json"
+      - "wrangler.toml"
+      - ".github/workflows/build-website.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "website/**"
+      - "package.json"
+      - "wrangler.toml"
+      - ".github/workflows/build-website.yml"
 
 permissions:
   contents: read
 
 jobs:
-  package:
+  verify-static-site:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/upload-artifact@v4
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          name: cloudflare-pages-static-site
-          path: apps/website/public
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: package.json
+
+      - name: Install Wrangler
+        run: npm install --ignore-scripts
+
+      - name: Verify website files
+        run: |
+          test -s website/index.html
+          test -s website/styles.css
+          test -s website/app.js
+          npm run check
+
+      - name: Validate Wrangler bundle without deploying
+        run: npx wrangler deploy --dry-run --outdir .wrangler-dry-run
+
+      - name: Upload verified website artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-static-site
+          path: website
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Deploy to Cloudflare when GitHub secrets exist
+        if: github.ref == 'refs/heads/main' && env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx wrangler deploy
