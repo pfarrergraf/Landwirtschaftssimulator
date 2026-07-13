@@ -1,10 +1,12 @@
 # DECISIONS.md
 
-## ADR-0001 – Engineentscheidung wird getrennt vorbereitet
+## ADR-0001 – Godot 4 für den Android-MVP
 
 - Status: accepted
-- Entscheidung: Die endgültige 3D-Engine wird in `ARC-001` bewertet. Bis dahin bleiben Daten, Assets und Tools engine-neutral.
-- Grund: Grafik- und Simulationsarbeit soll parallel beginnen können, ohne spätere Engineentscheidung vorwegzunehmen.
+- Entscheidung: Der erste spielbare Android-MVP wird mit Godot 4.x, GDScript und zunächst dem GL-Compatibility-Renderer entwickelt.
+- Grund: offene MIT-Lizenz, direkte Android-Pipeline, gut diffbare Textdateien, glTF/GLB-Unterstützung und geeignete Instancing-Werkzeuge für KI-first-Entwicklung.
+- Nachprüfung: Die konkrete Patchversion und der endgültige Renderer werden nach reproduzierbarem APK-Build und Gerätemessungen festgeschrieben.
+- Detaildokument: `docs/architecture/engine-evaluation/DECISION.md`.
 
 ## ADR-0002 – glTF/GLB als neutraler 3D-Austauschvertrag
 
@@ -30,9 +32,16 @@
 - Entscheidung: Maschinen werden zunächst generisch, ohne Logos, Modellnamen oder nahezu identische Markennachbauten gestaltet.
 - Grund: endgültige Marken- und Lizenzentscheidungen benötigen gesonderte Freigabe.
 
+## ADR-0006 – Engine-neutrale Domäne trotz Godot-Runtime
+
+- Status: accepted
+- Entscheidung: Feld-, Pflanzen-, Maschinen-, Charakter- und Savegame-Daten bleiben außerhalb von Godot-Szenen stabil modelliert. Godot-Nodes sind Adapter, nicht Quelle der Fachlogik.
+- Grund: Simulationstests, Datenmigration und spätere technische Änderungen bleiben beherrschbar.
+
 ## Offene Entscheidungen
 
-- `ARC-001`: Engine und Renderingstack.
-- Zielgeräte und harte Performancebudgets nach ersten Messungen.
-- endgültiges Lizenzmodell für Markenmaschinen.
+- konkrete stabile Godot-Patchversion nach erstem Android-Build,
+- GL Compatibility gegen Mobile-Renderer auf realen Zielgeräten,
+- Zielgeräte und harte Performancebudgets nach ersten Messungen,
+- endgültiges Lizenzmodell für Markenmaschinen,
 - Kartenregion und visuelle Regionalisierung des ersten vertikalen Ausschnitts.
