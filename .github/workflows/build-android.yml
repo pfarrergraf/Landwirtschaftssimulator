@@ -1,25 +1,70 @@
-name: Android planning build
+name: Build Android APK
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
+    paths:
+      - "game/godot/**"
+      - ".github/workflows/build-android.yml"
 
 permissions:
   contents: read
 
 jobs:
-  android-debug:
+  build-debug-apk:
     runs-on: ubuntu-latest
-    env:
-      GODOT_VERSION: "4.7-stable"
+    container:
+      image: barichello/godot-ci:4.3
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: "17"
-      - name: Explain current gate
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify canonical Godot project
         run: |
-          echo "This workflow is intentionally gated until export_presets.cfg is approved."
-          echo "Copy apps/game/export_presets.cfg.example to export_presets.cfg in a dedicated implementation PR."
-      - name: Verify planning shell exists
-        run: test -f apps/game/project.godot && test -f apps/game/scenes/main.tscn
+          test -f game/godot/project.godot
+          test -f game/godot/scenes/main.tscn
+          test -f game/godot/export_presets.cfg
+
+      - name: Import project headlessly
+        run: godot --headless --path game/godot --editor --quit
+
+      - name: Export Android debug APK
+        run: |
+          mkdir -p build/android
+          godot --headless --path game/godot --export-debug "Android Debug" ../../build/android/landwirtschaftssimulator-debug.apk
+          test -s build/android/landwirtschaftssimulator-debug.apk
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: landwirtschaftssimulator-debug-apk
+          path: build/android/landwirtschaftssimulator-debug.apk
+          if-no-files-found: error
+          retention-days: 30
+
+  publish-github-release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build-debug-apk
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download APK artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: landwirtschaftssimulator-debug-apk
+          path: release
+
+      - name: Publish tagged GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" \
+            release/landwirtschaftssimulator-debug.apk \
+            --repo "${GITHUB_REPOSITORY}" \
+            --generate-notes \
+            --title "Landwirtschaftssimulator ${GITHUB_REF_NAME}"
