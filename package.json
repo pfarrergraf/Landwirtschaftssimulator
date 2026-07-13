@@ -1,0 +1,13 @@
+{
+  "name": "landwirtschaftssimulator-web",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Public project website for the Landwirtschaftssimulator",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "check": "node --check website/app.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
